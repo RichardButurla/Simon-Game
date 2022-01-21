@@ -110,16 +110,35 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
-	m_window.clear(sf::Color::White);
-	m_window.draw(m_button);
+	m_window.clear(sf::Color::Black);
+	m_window.draw(m_redButton);
+	m_window.draw(m_blueButton);
+	m_window.draw(m_greenButton);
+	m_window.draw(m_yellowButton);
+
 	m_window.display();
 }
 
+/// <summary>
+/// setup button rectangles
+/// </summary>
 void Game::setupButtons()
 {
-	m_button.setFillColor(RED);
-	m_button.setPosition(sf::Vector2f(570.0f, 30.0f));
-	m_button.setSize(sf::Vector2f{ 200.0f, 200.0f });
+	m_redButton.setFillColor(RED);
+	m_redButton.setPosition(sf::Vector2f(570.0f, 30.0f));
+	m_redButton.setSize(sf::Vector2f{ 200.0f, 200.0f });
+
+	m_blueButton.setFillColor(BLUE);
+	m_blueButton.setPosition(sf::Vector2f(350.0f, 250.0f));
+	m_blueButton.setSize(sf::Vector2f{ 200.0f,200.0f });
+
+	m_greenButton.setFillColor(GREEN);
+	m_greenButton.setPosition(sf::Vector2f{ 570.0f, 250.0f });
+	m_greenButton.setSize(sf::Vector2f{ 200.0f, 200.0f });
+
+	m_yellowButton.setFillColor(YELLOW);
+	m_yellowButton.setPosition(sf::Vector2f{ 350.0f, 30.0f });
+	m_yellowButton.setSize(sf::Vector2f{ 200.0f, 200.0f });
 	
 }
 
