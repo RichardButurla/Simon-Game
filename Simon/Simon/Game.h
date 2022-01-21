@@ -42,6 +42,8 @@ private:
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
 	sf::Text m_title; //Title text
+	sf::Text m_instructions;
+	sf::Text m_menuButtonText;
 	//our squares
 	sf::RectangleShape m_redButton; 
 	sf::RectangleShape m_blueButton;

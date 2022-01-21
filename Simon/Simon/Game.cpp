@@ -116,6 +116,8 @@ void Game::render()
 	m_window.draw(m_greenButton);
 	m_window.draw(m_yellowButton);
 	m_window.draw(m_title);
+	m_window.draw(m_menuButtonText);
+	m_window.draw(m_instructions);
 
 	m_window.display();
 }
@@ -154,7 +156,7 @@ void Game::setupFontAndText()
 		std::cout << "problem loading arial black font" << std::endl;
 	}
 	m_title.setFont(m_ArialBlackfont);
-	m_title.setString("Simon ");
+	m_title.setString("Simon");
 	m_title.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
 	m_title.setPosition(40.0f, 40.0f);
 	m_title.setCharacterSize(80U);
@@ -162,6 +164,23 @@ void Game::setupFontAndText()
 	m_title.setFillColor(sf::Color::White);
 	m_title.setOutlineThickness(3.0f);
 
+	m_instructions.setFont(m_ArialBlackfont);
+	m_instructions.setString("How to play Simon:\nYou must click on the\n correct squares.\nYou must click on the\n square in order of how \nthey appear and play, ");
+	m_instructions.setStyle( sf::Text::Italic | sf::Text::Bold);
+	m_instructions.setPosition(40.0f, 150.0f);
+	m_instructions.setCharacterSize(18U);
+	m_instructions.setOutlineColor(sf::Color::Red);
+	m_instructions.setFillColor(sf::Color::White);
+	m_instructions.setOutlineThickness(3.0f);
+
+	m_menuButtonText.setFont(m_ArialBlackfont);
+	m_menuButtonText.setString("Green: Easy Mode  Yellow: Medium Difficulty  Red: Hard Mode  Blue: Exit Game");
+	m_menuButtonText.setStyle( sf::Text::Italic | sf::Text::Bold);
+	m_menuButtonText.setPosition(40.0f, 575.0f);
+	m_menuButtonText.setCharacterSize(15U);
+	//m_menuButtonText.setOutlineColor(sf::Color::Red);
+	m_menuButtonText.setFillColor(sf::Color::White);
+	m_menuButtonText.setOutlineThickness(3.0f);
 }
 
 
