@@ -34,17 +34,22 @@ private:
 	void render();
 
 	void setupButtons();
+	void setupFontAndText();
 	
-	//void setupSprite();
 
 
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::Font m_ArialBlackfont; // font used by message
-	sf::RectangleShape m_redButton; //our red square
+	sf::Text m_title; //Title text
+	//our squares
+	sf::RectangleShape m_redButton; 
 	sf::RectangleShape m_blueButton;
 	sf::RectangleShape m_greenButton;
 	sf::RectangleShape m_yellowButton;
+
+
+
 	bool m_exitGame; // control exiting game
 
 };

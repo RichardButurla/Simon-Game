@@ -21,7 +21,7 @@ Game::Game() :
 
 {
 	setupButtons();
-	//setupFontAndText(); // load font 
+	setupFontAndText(); // load font 
 }
 
 /// <summary>
@@ -115,6 +115,7 @@ void Game::render()
 	m_window.draw(m_blueButton);
 	m_window.draw(m_greenButton);
 	m_window.draw(m_yellowButton);
+	m_window.draw(m_title);
 
 	m_window.display();
 }
@@ -142,7 +143,7 @@ void Game::setupButtons()
 	
 }
 
-/*
+
 /// <summary>
 /// load the font and setup the text message for screen
 /// </summary>
@@ -152,15 +153,15 @@ void Game::setupFontAndText()
 	{
 		std::cout << "problem loading arial black font" << std::endl;
 	}
-	m_welcomeMessage.setFont(m_ArialBlackfont);
-	m_welcomeMessage.setString("SFML Game");
-	m_welcomeMessage.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
-	m_welcomeMessage.setPosition(40.0f, 40.0f);
-	m_welcomeMessage.setCharacterSize(80U);
-	m_welcomeMessage.setOutlineColor(sf::Color::Red);
-	m_welcomeMessage.setFillColor(sf::Color::Black);
-	m_welcomeMessage.setOutlineThickness(3.0f);
+	m_title.setFont(m_ArialBlackfont);
+	m_title.setString("Simon ");
+	m_title.setStyle(sf::Text::Underlined | sf::Text::Italic | sf::Text::Bold);
+	m_title.setPosition(40.0f, 40.0f);
+	m_title.setCharacterSize(80U);
+	m_title.setOutlineColor(sf::Color::Red);
+	m_title.setFillColor(sf::Color::White);
+	m_title.setOutlineThickness(3.0f);
 
 }
-*/
+
 
