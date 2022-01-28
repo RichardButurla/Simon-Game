@@ -116,7 +116,10 @@ void Game::render()
 	m_window.draw(m_greenButton);
 	m_window.draw(m_yellowButton);
 	m_window.draw(m_title);
-	m_window.draw(m_menuButtonText);
+	m_window.draw(m_greenText);
+	m_window.draw(m_yellowText);
+	m_window.draw(m_redText);
+	m_window.draw(m_blueText);
 	m_window.draw(m_instructions);
 
 	m_window.display();
@@ -173,14 +176,38 @@ void Game::setupFontAndText()
 	m_instructions.setFillColor(sf::Color::White);
 	m_instructions.setOutlineThickness(3.0f);
 
-	m_menuButtonText.setFont(m_ArialBlackfont);
-	m_menuButtonText.setString("Green: Easy Mode  Yellow: Medium Difficulty  Red: Hard Mode  Blue: Exit Game");
-	m_menuButtonText.setStyle( sf::Text::Italic | sf::Text::Bold);
-	m_menuButtonText.setPosition(40.0f, 575.0f);
-	m_menuButtonText.setCharacterSize(15U);
-	//m_menuButtonText.setOutlineColor(sf::Color::Red);
-	m_menuButtonText.setFillColor(sf::Color::White);
-	m_menuButtonText.setOutlineThickness(3.0f);
+	m_greenText.setFont(m_ArialBlackfont);
+	m_greenText.setString("Green: Easy Mode");
+	m_greenText.setStyle( sf::Text::Italic | sf::Text::Bold);
+	m_greenText.setPosition(40.0f, 575.0f);
+	m_greenText.setCharacterSize(15U);
+	m_greenText.setFillColor(sf::Color::Green);
+	m_greenText.setOutlineThickness(3.0f);
+
+	m_yellowText.setFont(m_ArialBlackfont);
+	m_yellowText.setString(" Yellow: Medium Difficulty");
+	m_yellowText.setStyle(sf::Text::Italic | sf::Text::Bold);
+	m_yellowText.setPosition(220.0f, 575.0f);
+	m_yellowText.setCharacterSize(15U);
+	m_yellowText.setFillColor(sf::Color::Yellow);
+	m_yellowText.setOutlineThickness(3.0f);
+
+	m_redText.setFont(m_ArialBlackfont);
+	m_redText.setString("Red: Hard Mode ");
+	m_redText.setStyle(sf::Text::Italic | sf::Text::Bold);
+	m_redText.setPosition(480.0f, 575.0f);
+	m_redText.setCharacterSize(15U);
+	m_redText.setFillColor(sf::Color::Red);
+	m_redText.setOutlineThickness(3.0f);
+
+	m_blueText.setFont(m_ArialBlackfont);
+	m_blueText.setString("Blue: Exit Game ");
+	m_blueText.setStyle(sf::Text::Italic | sf::Text::Bold);
+	m_blueText.setPosition(640.0f, 575.0f);
+	m_blueText.setCharacterSize(15U);
+	m_blueText.setFillColor(sf::Color::Blue);
+	m_blueText.setOutlineThickness(3.0f);
 }
+
 
 

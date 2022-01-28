@@ -16,6 +16,14 @@ const sf::Color BLUE{ 0,0,180,255 };
 const sf::Color GREEN{ 0,180,0,255 };
 const sf::Color YELLOW{ 180,180,0,255 };
 
+enum class GameMode
+{
+	Showing,
+	Recieving,
+	GameOver,
+	Starting
+};
+
 class Game
 {
 public:
@@ -43,12 +51,16 @@ private:
 	sf::Font m_ArialBlackfont; // font used by message
 	sf::Text m_title; //Title text
 	sf::Text m_instructions;
-	sf::Text m_menuButtonText;
 	//our squares
 	sf::RectangleShape m_redButton; 
 	sf::RectangleShape m_blueButton;
 	sf::RectangleShape m_greenButton;
 	sf::RectangleShape m_yellowButton;
+
+	sf::Text m_greenText;
+	sf::Text m_yellowText;
+	sf::Text m_redText;
+	sf::Text m_blueText;
 
 
 
